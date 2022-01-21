@@ -11,7 +11,7 @@
             <table border="4">
                 <tr>
                     @foreach ($datas['column'] as $column)
-                        @if($column != 'id' || $column != 'created_at' || $column != 'updated_at')
+                        @if($column !== 'id' && $column !== 'created_at' && $column !== 'updated_at')
                             <th>{{ $column }}</th>
                         @endif
                     @endforeach
@@ -19,7 +19,7 @@
                 </tr>
                 <tr>
                     @foreach ($datas['column'] as $column)
-                        @if($column != 'id' || $column != 'created_at' || $column != 'updated_at')
+                        @if($column != 'id' && $column != 'created_at' && $column != 'updated_at')
                             <td><input name="data[{{ $column }}]"}}" type="text"></td>
                         @endif
                     @endforeach

@@ -10,17 +10,10 @@ class Movie extends Model
 {
     use HasFactory;
 
-    protected $table = 'movies';
+    protected $fillable = [
+        'image_url',
+        'title',
+    ]; //保存したいカラム名が複数の場合
+    protected $guaded = 'id';
 
-    protected $duaded = 'id';
-
-    function getCoulmnType()
-    {
-        return [
-            'id',
-            'string',
-            'string',
-            'timestamps'
-        ];
-    }
 }

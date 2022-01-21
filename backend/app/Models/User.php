@@ -47,18 +47,5 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    function getCoulmnType()
-    {
-        return [
-            'id(increments)',
-            'string',
-            'string(unique)',
-            'timestamp(nullable)',
-            'string',
-            'rememberToken',
-            'timestamps'
-        ];
-    }
-
 
 }
