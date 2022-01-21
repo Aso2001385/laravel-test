@@ -20,7 +20,7 @@
                 <tr>
                     @foreach ($datas['column'] as $column)
                         @if($column != 'id' || $column != 'created_at' || $column != 'updated_at')
-                            <td><input name="data[{{ $column }}]" value="{{ $datas["items"]->$column }}" type="text"></td>
+                            <td><input name="data[{{ $column }}]"}}" type="text"></td>
                         @endif
                     @endforeach
                     <td><button type="submit" name='table' value="{{ $datas['table'] }}">追加</button></td>
